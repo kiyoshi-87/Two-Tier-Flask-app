@@ -5,10 +5,10 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 
 # Configure MySQL from environment variables
-app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST', 'localhost')
-app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER', 'default_user')
-app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD', 'default_password')
-app.config['MYSQL_DB'] = os.environ.get('MYSQL_DB', 'default_db')
+app.config['MYSQL_HOST'] = 'localhost:3306'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'default_password'
+app.config['MYSQL_DB'] = 'default_db'
 
 # Initialize MySQL
 mysql = MySQL(app)
